@@ -13,6 +13,14 @@
 		E25867B62A9CE9D500D54246 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E25867B52A9CE9D500D54246 /* Preview Assets.xcassets */; };
 		E25867B82A9CE9D500D54246 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25867B72A9CE9D500D54246 /* Persistence.swift */; };
 		E25867BB2A9CE9D500D54246 /* restaurant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E25867B92A9CE9D500D54246 /* restaurant.xcdatamodeld */; };
+		E25868362A9CF20B00D54246 /* OrderedProduct+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258682E2A9CF20B00D54246 /* OrderedProduct+CoreDataClass.swift */; };
+		E25868372A9CF20B00D54246 /* OrderedProduct+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258682F2A9CF20B00D54246 /* OrderedProduct+CoreDataProperties.swift */; };
+		E25868382A9CF20B00D54246 /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25868302A9CF20B00D54246 /* Category+CoreDataClass.swift */; };
+		E25868392A9CF20B00D54246 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25868312A9CF20B00D54246 /* Category+CoreDataProperties.swift */; };
+		E258683A2A9CF20B00D54246 /* Order+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25868322A9CF20B00D54246 /* Order+CoreDataClass.swift */; };
+		E258683B2A9CF20B00D54246 /* Order+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25868332A9CF20B00D54246 /* Order+CoreDataProperties.swift */; };
+		E258683C2A9CF20B00D54246 /* Product+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25868342A9CF20B00D54246 /* Product+CoreDataClass.swift */; };
+		E258683D2A9CF20B00D54246 /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25868352A9CF20B00D54246 /* Product+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +31,14 @@
 		E25867B52A9CE9D500D54246 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E25867B72A9CE9D500D54246 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		E25867BA2A9CE9D500D54246 /* restaurant.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = restaurant.xcdatamodel; sourceTree = "<group>"; };
+		E258682E2A9CF20B00D54246 /* OrderedProduct+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "OrderedProduct+CoreDataClass.swift"; path = "restaurant/DatabaseModels/OrderedProduct+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E258682F2A9CF20B00D54246 /* OrderedProduct+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "OrderedProduct+CoreDataProperties.swift"; path = "restaurant/DatabaseModels/OrderedProduct+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E25868302A9CF20B00D54246 /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Category+CoreDataClass.swift"; path = "restaurant/DatabaseModels/Category+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E25868312A9CF20B00D54246 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Category+CoreDataProperties.swift"; path = "restaurant/DatabaseModels/Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E25868322A9CF20B00D54246 /* Order+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Order+CoreDataClass.swift"; path = "restaurant/DatabaseModels/Order+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E25868332A9CF20B00D54246 /* Order+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Order+CoreDataProperties.swift"; path = "restaurant/DatabaseModels/Order+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E25868342A9CF20B00D54246 /* Product+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Product+CoreDataClass.swift"; path = "restaurant/DatabaseModels/Product+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E25868352A9CF20B00D54246 /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Product+CoreDataProperties.swift"; path = "restaurant/DatabaseModels/Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +55,14 @@
 		E25867A22A9CE9D400D54246 = {
 			isa = PBXGroup;
 			children = (
+				E258682E2A9CF20B00D54246 /* OrderedProduct+CoreDataClass.swift */,
+				E258682F2A9CF20B00D54246 /* OrderedProduct+CoreDataProperties.swift */,
+				E25868302A9CF20B00D54246 /* Category+CoreDataClass.swift */,
+				E25868312A9CF20B00D54246 /* Category+CoreDataProperties.swift */,
+				E25868322A9CF20B00D54246 /* Order+CoreDataClass.swift */,
+				E25868332A9CF20B00D54246 /* Order+CoreDataProperties.swift */,
+				E25868342A9CF20B00D54246 /* Product+CoreDataClass.swift */,
+				E25868352A9CF20B00D54246 /* Product+CoreDataProperties.swift */,
 				E25867AD2A9CE9D500D54246 /* restaurant */,
 				E25867AC2A9CE9D500D54246 /* Products */,
 			);
@@ -144,9 +168,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				E25867BB2A9CE9D500D54246 /* restaurant.xcdatamodeld in Sources */,
+				E25868372A9CF20B00D54246 /* OrderedProduct+CoreDataProperties.swift in Sources */,
+				E258683D2A9CF20B00D54246 /* Product+CoreDataProperties.swift in Sources */,
+				E258683B2A9CF20B00D54246 /* Order+CoreDataProperties.swift in Sources */,
+				E25868382A9CF20B00D54246 /* Category+CoreDataClass.swift in Sources */,
 				E25867B82A9CE9D500D54246 /* Persistence.swift in Sources */,
+				E258683C2A9CF20B00D54246 /* Product+CoreDataClass.swift in Sources */,
+				E25868362A9CF20B00D54246 /* OrderedProduct+CoreDataClass.swift in Sources */,
 				E25867B12A9CE9D500D54246 /* ContentView.swift in Sources */,
 				E25867AF2A9CE9D500D54246 /* restaurantApp.swift in Sources */,
+				E258683A2A9CF20B00D54246 /* Order+CoreDataClass.swift in Sources */,
+				E25868392A9CF20B00D54246 /* Category+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

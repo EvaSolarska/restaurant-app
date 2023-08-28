@@ -21,6 +21,11 @@
 		E258683B2A9CF20B00D54246 /* Order+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25868332A9CF20B00D54246 /* Order+CoreDataProperties.swift */; };
 		E258683C2A9CF20B00D54246 /* Product+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25868342A9CF20B00D54246 /* Product+CoreDataClass.swift */; };
 		E258683D2A9CF20B00D54246 /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25868352A9CF20B00D54246 /* Product+CoreDataProperties.swift */; };
+		E25868402A9CF62100D54246 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258683F2A9CF62100D54246 /* MenuView.swift */; };
+		E25868422A9CF62C00D54246 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25868412A9CF62C00D54246 /* OrderView.swift */; };
+		E25868442A9CF63800D54246 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25868432A9CF63800D54246 /* InfoView.swift */; };
+		E25868462A9CF69C00D54246 /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25868452A9CF69C00D54246 /* CategoryButton.swift */; };
+		E25868492A9CF8A700D54246 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25868482A9CF8A700D54246 /* DatabaseService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +44,11 @@
 		E25868332A9CF20B00D54246 /* Order+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Order+CoreDataProperties.swift"; path = "restaurant/DatabaseModels/Order+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E25868342A9CF20B00D54246 /* Product+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Product+CoreDataClass.swift"; path = "restaurant/DatabaseModels/Product+CoreDataClass.swift"; sourceTree = "<group>"; };
 		E25868352A9CF20B00D54246 /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Product+CoreDataProperties.swift"; path = "restaurant/DatabaseModels/Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E258683F2A9CF62100D54246 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		E25868412A9CF62C00D54246 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		E25868432A9CF63800D54246 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		E25868452A9CF69C00D54246 /* CategoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
+		E25868482A9CF8A700D54246 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +89,9 @@
 		E25867AD2A9CE9D500D54246 /* restaurant */ = {
 			isa = PBXGroup;
 			children = (
+				E25868472A9CF88400D54246 /* Service */,
+				E258683E2A9CF5E300D54246 /* Views */,
 				E25867AE2A9CE9D500D54246 /* restaurantApp.swift */,
-				E25867B02A9CE9D500D54246 /* ContentView.swift */,
 				E25867B22A9CE9D500D54246 /* Assets.xcassets */,
 				E25867B72A9CE9D500D54246 /* Persistence.swift */,
 				E25867B92A9CE9D500D54246 /* restaurant.xcdatamodeld */,
@@ -95,6 +106,26 @@
 				E25867B52A9CE9D500D54246 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E258683E2A9CF5E300D54246 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E25867B02A9CE9D500D54246 /* ContentView.swift */,
+				E258683F2A9CF62100D54246 /* MenuView.swift */,
+				E25868412A9CF62C00D54246 /* OrderView.swift */,
+				E25868432A9CF63800D54246 /* InfoView.swift */,
+				E25868452A9CF69C00D54246 /* CategoryButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E25868472A9CF88400D54246 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E25868482A9CF8A700D54246 /* DatabaseService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E25868492A9CF8A700D54246 /* DatabaseService.swift in Sources */,
 				E25867BB2A9CE9D500D54246 /* restaurant.xcdatamodeld in Sources */,
 				E25868372A9CF20B00D54246 /* OrderedProduct+CoreDataProperties.swift in Sources */,
 				E258683D2A9CF20B00D54246 /* Product+CoreDataProperties.swift in Sources */,
@@ -174,10 +206,14 @@
 				E25868382A9CF20B00D54246 /* Category+CoreDataClass.swift in Sources */,
 				E25867B82A9CE9D500D54246 /* Persistence.swift in Sources */,
 				E258683C2A9CF20B00D54246 /* Product+CoreDataClass.swift in Sources */,
+				E25868402A9CF62100D54246 /* MenuView.swift in Sources */,
 				E25868362A9CF20B00D54246 /* OrderedProduct+CoreDataClass.swift in Sources */,
+				E25868462A9CF69C00D54246 /* CategoryButton.swift in Sources */,
 				E25867B12A9CE9D500D54246 /* ContentView.swift in Sources */,
 				E25867AF2A9CE9D500D54246 /* restaurantApp.swift in Sources */,
+				E25868422A9CF62C00D54246 /* OrderView.swift in Sources */,
 				E258683A2A9CF20B00D54246 /* Order+CoreDataClass.swift in Sources */,
+				E25868442A9CF63800D54246 /* InfoView.swift in Sources */,
 				E25868392A9CF20B00D54246 /* Category+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

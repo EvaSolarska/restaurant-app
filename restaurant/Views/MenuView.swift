@@ -21,6 +21,7 @@ struct MenuView: View {
     @State var selectedCategory: Category?
     @State var selectedProduct: Product?
     
+    let adaptiveColumns = [ GridItem(.adaptive(minimum: 170)) ]
     
     var body: some View {
         VStack (alignment: .leading){
@@ -35,9 +36,20 @@ struct MenuView: View {
                     }
                 }
             }.padding(.horizontal,10)
+            ScrollView{
+                LazyVGrid(columns: adaptiveColumns, spacing: 20) {
+                    ForEach(products.filter { product in
+                        product.toCategory == selectedCategory
+                    }) { product in
+                        ProductCardView(product: product, selectedProduct: $selectedProduct)
+                    }
+                }.padding(.vertical,10)
+                    .id(selectedCategory)
+            }
         }.padding(.vertical,16)
             .onAppear{
                 DatabaseService.shared.addCategory(context: viewContext)
+                DatabaseService.shared.addProducts(context: viewContext, categories: Array(categories))
                 selectedCategory = categories.first
             }
     }

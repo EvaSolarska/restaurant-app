@@ -21,6 +21,8 @@ struct MenuView: View {
     @State var selectedCategory: Category?
     @State var selectedProduct: Product?
     
+    @State var showingDetail = false
+    
     let adaptiveColumns = [ GridItem(.adaptive(minimum: 170)) ]
     
     var body: some View {
@@ -41,10 +43,13 @@ struct MenuView: View {
                     ForEach(products.filter { product in
                         product.toCategory == selectedCategory
                     }) { product in
-                        ProductCardView(product: product, selectedProduct: $selectedProduct)
+                        ProductCardView(product: product, selectedProduct: $selectedProduct, showingDetail: $showingDetail)
                     }
                 }.padding(.vertical,10)
                     .id(selectedCategory)
+                    .sheet(isPresented: $showingDetail) {
+                        DetailView(product: $selectedProduct)
+                    }
             }
         }.padding(.vertical,16)
             .onAppear{

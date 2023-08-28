@@ -14,7 +14,8 @@ struct ProductCardView: View {
     @Binding var selectedProduct: Product?
     
     @Environment(\.managedObjectContext) private var viewContext
-
+    @Binding var showingDetail: Bool
+    
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 16)
@@ -54,6 +55,7 @@ struct ProductCardView: View {
 
             } .onLongPressGesture {
                 selectedProduct = product
+                showingDetail = true
             }
             .padding(.horizontal, 10)
         }

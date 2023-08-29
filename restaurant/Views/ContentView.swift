@@ -22,6 +22,10 @@ struct ContentView: View {
                 Image(systemName: "basket")
                 Text("Order")
             }
+            InformationView().tabItem(){
+                 Image(systemName: "map")
+                 Text("Information")
+             }
         }
     }
 }

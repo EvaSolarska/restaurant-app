@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct ProductCardView: View {
     let product: Product
-    @Binding var selectedProduct: Product?
-    
     @Environment(\.managedObjectContext) private var viewContext
-    @Binding var showingDetail: Bool
     
+    @Binding var selectedProduct: Product?
+    @Binding var showingDetail: Bool
+    @Binding var currentOrder: Order?
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Order.status, ascending: true)],animation: .default)
+    private var orders: FetchedResults<Order>
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 16)
@@ -43,7 +43,16 @@ struct ProductCardView: View {
 
                 Spacer()
                 Button(action: {
-                    
+                    if currentOrder == nil {
+                        if let pendingOrder = orders.first(where: { $0.status == "Pending" }) {
+                            currentOrder = pendingOrder
+                        } else {
+                            currentOrder = DatabaseService.shared.createOrder(in: viewContext)
+                        }
+                    }
+                    if let currentOrder = currentOrder {
+                        DatabaseService.shared.addToOrder(product: product, order: currentOrder, in: viewContext)
+                    }
                 }){
                     Image(systemName: "plus")
                         .foregroundColor(.white)

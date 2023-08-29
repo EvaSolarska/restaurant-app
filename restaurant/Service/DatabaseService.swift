@@ -82,4 +82,36 @@ class DatabaseService {
             }
         }
     }
+        
+        func createOrder(in context: NSManagedObjectContext) -> Order {
+            let newOrder = Order(context: context)
+            newOrder.date = Date()
+            newOrder.status = "Pending"
+            return newOrder
+        }
+        
+        func addToOrder(product: Product, order: Order, in context: NSManagedObjectContext) {
+            if let existingOrderedProduct = (order.toOrderedProduct as? Set<OrderedProduct>)?.first(where: { $0.toProduct == product }) {
+                existingOrderedProduct.quantity += 1
+            } else {
+                let newOrderedProduct = OrderedProduct(context: context)
+                newOrderedProduct.toProduct = product
+                newOrderedProduct.quantity = 1
+                newOrderedProduct.toOrder = order
+            }
+            saveContext(context)
+        }
+    
+    func incrementQuantity(for product: OrderedProduct, in context: NSManagedObjectContext) {
+        product.quantity += 1
+        saveContext(context)
+    }
+    
+    func decrementQuantity(for product: OrderedProduct, in context: NSManagedObjectContext) {
+        product.quantity -= 1
+        if product.quantity == 0 {
+            context.delete(product)
+        }
+        saveContext(context)
+    }
 }

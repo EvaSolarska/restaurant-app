@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct CategoryButton: View {
     let category: Category
     @Binding var selectedCategory: Category?

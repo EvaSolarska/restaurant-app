@@ -29,6 +29,7 @@
 		E258684B2A9CFD1100D54246 /* ProductCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258684A2A9CFD1100D54246 /* ProductCardView.swift */; };
 		E258684E2A9CFDA100D54246 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258684D2A9CFDA100D54246 /* ProductModel.swift */; };
 		E25868502A9D616D00D54246 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258684F2A9D616D00D54246 /* DetailView.swift */; };
+		E25D77842A9E21F400737383 /* OrderedProductRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25D77832A9E21F400737383 /* OrderedProductRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		E258684A2A9CFD1100D54246 /* ProductCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardView.swift; sourceTree = "<group>"; };
 		E258684D2A9CFDA100D54246 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		E258684F2A9D616D00D54246 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		E25D77832A9E21F400737383 /* OrderedProductRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedProductRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				E25868452A9CF69C00D54246 /* CategoryButton.swift */,
 				E258684A2A9CFD1100D54246 /* ProductCardView.swift */,
 				E258684F2A9D616D00D54246 /* DetailView.swift */,
+				E25D77832A9E21F400737383 /* OrderedProductRowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				E25867B12A9CE9D500D54246 /* ContentView.swift in Sources */,
 				E25867AF2A9CE9D500D54246 /* restaurantApp.swift in Sources */,
 				E25868422A9CF62C00D54246 /* OrderView.swift in Sources */,
+				E25D77842A9E21F400737383 /* OrderedProductRowView.swift in Sources */,
 				E258683A2A9CF20B00D54246 /* Order+CoreDataClass.swift in Sources */,
 				E25868442A9CF63800D54246 /* InfoView.swift in Sources */,
 				E25868392A9CF20B00D54246 /* Category+CoreDataProperties.swift in Sources */,

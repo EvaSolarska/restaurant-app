@@ -10,12 +10,17 @@ import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
+    @State private var currentOrder: Order?
     
     var body: some View {
         TabView{
-            MenuView().tabItem(){
+            MenuView(currentOrder: $currentOrder).tabItem(){
                 Image(systemName: "menucard")
                 Text("Menu")
+            }
+            OrderView(currentOrder: $currentOrder).tabItem(){
+                Image(systemName: "basket")
+                Text("Order")
             }
         }
     }

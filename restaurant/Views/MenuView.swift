@@ -6,9 +6,8 @@
 //
 
 import SwiftUI
-
-import SwiftUI
 import CoreData
+
 struct MenuView: View {
     @Environment(\.managedObjectContext) private var viewContext
     
@@ -22,6 +21,7 @@ struct MenuView: View {
     @State var selectedProduct: Product?
     
     @State var showingDetail = false
+    @Binding var currentOrder: Order?
     
     let adaptiveColumns = [ GridItem(.adaptive(minimum: 170)) ]
     
@@ -43,7 +43,7 @@ struct MenuView: View {
                     ForEach(products.filter { product in
                         product.toCategory == selectedCategory
                     }) { product in
-                        ProductCardView(product: product, selectedProduct: $selectedProduct, showingDetail: $showingDetail)
+                        ProductCardView(product: product, selectedProduct: $selectedProduct, showingDetail: $showingDetail,currentOrder: $currentOrder)
                     }
                 }.padding(.vertical,10)
                     .id(selectedCategory)

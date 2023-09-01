@@ -114,4 +114,19 @@ class DatabaseService {
         }
         saveContext(context)
     }
+    
+    func deleteEntityData(context: NSManagedObjectContext, entityName: String) {
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: entityName)
+        
+        do {
+            let results = try context.fetch(fetchRequest)
+            for object in results {
+                guard let object = object as? NSManagedObject else { continue }
+                context.delete(object)
+            }
+            try context.save()
+        } catch let error {
+            print("Error deleting : \(error)")
+        }
+    }
 }
